@@ -1,6 +1,7 @@
 <p align="center">
   <img src="https://github.com/Cancerian786/Favicon/blob/main/nginx.png" alt="DevOpsGuru Banner">
 </p>
+
 # 🎉 Welcome to DevOpsGuru
 
 # 🔄 Step 1: Update Your System

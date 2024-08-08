@@ -1,4 +1,6 @@
-![DevOpsGuru Banner](https://github.com/Cancerian786/Favicon/blob/main/tomcat.png)
+<p align="center">
+  <img src="https://github.com/Cancerian786/Favicon/blob/main/tomcat.png" alt="DevOpsGuru Banner">
+</p>
 
 # 🎉 Welcome to DevOpsGuru
 
