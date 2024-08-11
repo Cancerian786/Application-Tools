@@ -2,6 +2,8 @@
   <img src="https://github.com/Cancerian786/Favicon/blob/main/nginx.png" alt="DevOpsGuru Banner">
 </p>
 
+![Rotating Gear](https://media.giphy.com/media/3o6Zt5WVuuJ6uN4cso/giphy.gif)
+
 <h1 style="color:#4CAF50;"><marquee>🎉 Welcome to <em>DevOpsGuru</em></marquee></h1>
 
 <h2 style="color:#FF5722;">📦 Process to Install NGINX</h2>
