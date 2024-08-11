@@ -2,19 +2,19 @@
   <img src="https://github.com/Cancerian786/Favicon/blob/main/nginx.png" alt="DevOpsGuru Banner">
 </p>
 
-# 🎉 Welcome to DevOpsGuru
+<h1 style="color:#4CAF50;">🎉 Welcome to <em>DevOpsGuru</em></h1>
 
-# 📦 PROCESS TO INSTALL NGINX
+<h2 style="color:#FF5722;">📦 Process to Install NGINX</h2>
 
-# 📄 If you are Using Latest Version of RHEL Distribution of Linux, You Can follow below Steps.
+<p style="font-size:16px; color:#2196F3;">
+    📄 If you are using the latest version of RHEL distribution of Linux, you can follow the steps below.
+</p>
 
 # 🔄 Step 1: Update Your System
 
 <EOF>
 
     sudo yum -y update
-
-</EOF>
 
 📦 Step 2: Install the Extra Packages for Enterprise Linux (EPEL) Repository
 
@@ -26,8 +26,6 @@ Nginx is not included in the standard CentOS repositories, so you need to instal
 
     sudo yum install -y epel-release
 
-</EOF>
-
 🚀 Step 3: Install and Configure Nginx
 
 After installing the EPEL repository, you can install Nginx on your server. Use the following commands:
@@ -38,16 +36,12 @@ After installing the EPEL repository, you can install Nginx on your server. Use 
 
     sudo yum -y install nginx
 
-</EOF>
-
 # Start Nginx and enable it to start on boot
 
 <EOF>
 
     sudo systemctl start nginx
     sudo systemctl enable nginx
-
-</EOF>
 
 🔐 Step 4: Configure Firewall for HTTP/HTTPS Traffic
 
@@ -58,23 +52,17 @@ After installing the EPEL repository, you can install Nginx on your server. Use 
     firewall-cmd --zone=public --permanent --add-service=http
     firewall-cmd --zone=public --permanent --add-service=https
 
-</EOF>
-
 # Reload the Firewall, After applying the Changes:
 
 <EOF>
 
     firewall-cmd --reload
 
-</EOF>
-
 # Enable Nginx in Config-Manager (Not Compulsory):
 
 <EOF>
 
     yum-config-manager --enable nginx
-
-</EOF>
 
 # 📄 If you are Using Older Version of RHEL Distribution of Linux which is EOL(End Of Life) Support, You Can follow below Steps.
 
@@ -83,8 +71,6 @@ After installing the EPEL repository, you can install Nginx on your server. Use 
 <EOF>
 
     vi /etc/yum.repos.d/CentOS-Base.repo
-
-</EOF>
 
 Replace the entire data present in <CentOS-Base.repo>, with the below Given data
 
@@ -124,15 +110,11 @@ Replace the entire data present in <CentOS-Base.repo>, with the below Given data
     enabled=0
     gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
-</EOF>
-
 # 🔄 Step 1: Update Your System
 
 <EOF>
 
     sudo yum -y update
-
-</EOF>
 
 # 📦 Step 2: Install EPEL Repository, use the following command:
 
@@ -140,15 +122,11 @@ Replace the entire data present in <CentOS-Base.repo>, with the below Given data
 
     sudo yum install -y epel-release
 
-</EOF>
-
 # 🚀 Step 3: Install and Configure Nginx
 
 <EOF>
 
     sudo yum -y install nginx
-
-</EOF>
 
 # 🛠️ Step 4: Start Nginx and enable it to start on boot
 
@@ -156,8 +134,6 @@ Replace the entire data present in <CentOS-Base.repo>, with the below Given data
 
     sudo systemctl start nginx
     sudo systemctl enable nginx
-
-</EOF>
 
 🔐 Step 5: Configure Firewall for HTTP/HTTPS Traffic
 
@@ -167,8 +143,6 @@ Replace the entire data present in <CentOS-Base.repo>, with the below Given data
 
     firewall-cmd --zone=public --permanent --add-service=http
     firewall-cmd --zone=public --permanent --add-service=https
-
-</EOF>
 
 # Reload the Firewall, After applying the Changes:
 
