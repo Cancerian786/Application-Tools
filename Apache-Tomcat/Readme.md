@@ -19,52 +19,73 @@ Note: The major dependency for Apache Tomcat 9.0.x is Java 8 or later. Ensure th
 
 ## INSTALL wget COMMAND
 
+<>
 sudo yum -y install wget
+</>
 
 ## Check Java Version
 
+<>
 java -version
-
+</>
+<>
 sudo yum -y install java-11-openjdk java-11-openjdk-devel
+</>
 
 ## Note: Below Other Command you can try to Install Java
 
+<>
 apt install openjdk-11-jre-headless
+</>
 
 ## Instead, create a dedicated user and group for Tomcat:
 
+<>
 sudo groupadd tomcat
 
 sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
+</>
 
 ## Create a directory named /opt/tomcat with the mkdir command:
 
+<>
 sudo mkdir /opt/tomcat
+</>
 
 ## DOWNLOAD TOMCAT PACKAGE
 
+<>
 export VER="9.0.64"
-
+</>
+<>
 wget https://dlcdn.apache.org/tomcat/tomcat-9/v${VER}/bin/apache-tomcat-${VER}.tar.gz
-
+</>
+<>
 curl -O https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.91/bin/apache-tomcat-9.0.91.tar.gz
+</>
 
 ## EXTRACT THE DOWNLOADED TAR FILE
 
+<>
 sudo tar xvf apache-tomcat-${VER}.tar.gz -C /usr/share/ --strip-components=1
 
 sudo tar xzvf apache-tomcat-9\*tar.gz -C /opt/tomcat --strip-components=1
+</>
 
 ## Create symlink to extracted tomcat data {This step is not Necessary/Recommended}
 
+<>
 sudo ln -s /usr/share/apache-tomcat-$VER/ /usr/share/tomcat
+</>
 
 ## Assign the tomcat directory ownership to the Tomcat user and group, and ensure the scripts in the bin directory are executable by changing file and directory permissions. Run the following commands for these tasks {Use Anyone as per Your Directory Path}
 
+<>
 sudo chown -RH tomcat: /opt/tomcat
 sudo chown -R tomcat:tomcat /usr/share/tomcat
 
 sudo chmod +x /opt/tomcat/bin/\*.sh
+</>
 
 # The /usr/share/tomcat directory has the following sub-directories:
 
@@ -77,14 +98,19 @@ sudo chmod +x /opt/tomcat/bin/\*.sh
 
 ## Determine the Java installation path using the following command:
 
+<>
 sudo update-java-alternatives -l
+</>
 
 ## create a new systemd service file for Tomcat with the following command:
 
+<>
 sudo vi /etc/systemd/system/tomcat.service
+</>
 
 # Add Below Context in the Above File
 
+<>
 [Unit]
 Description=Apache Tomcat Web Application Container
 After=network.target
@@ -111,25 +137,33 @@ Restart=always
 [Install]
 
 WantedBy=multi-user.target
+</>
 
 ## Save the file and reload the daemon:
 
+<>
 sudo systemctl daemon-reload
+</>
 
 ## start the Tomcat service and check its status with the following systemctl commands:
 
+<>
 sudo systemctl start tomcat
 
 sudo systemctl status tomcat
+</>
 
 ## Now that the Tomcat service is running, you should configure the firewall to allow traffic on port 8080, commonly used by web servers on Ubuntu systems:
 
+<>
 sudo ufw allow 8080/tcp
+</>
 
 ## Add the following line to the file to set up the user and role configurations:
 
+<>
 sudo vi /opt/tomcat/conf/tomcat-users.xml
-
+</>
 <tomcat-users>
 
     <role rolename="manager-gui"/>
