@@ -10,9 +10,12 @@
 
 # 🔄 Step 1: Update Your System
 
-<EOL>
+<update>
+
 sudo yum -y update
-</EOL>
+
+</update>
+
 📦 Step 2: Install the Extra Packages for Enterprise Linux (EPEL) Repository
 
 Nginx is not included in the standard CentOS repositories, so you need to install the EPEL repository. EPEL is a free resource that offers a wide range of open-source packages for installation using Yum.
