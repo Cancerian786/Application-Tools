@@ -10,11 +10,9 @@
 
 # 🔄 Step 1: Update Your System
 
-<update>
-
-sudo yum -y update
-
-</update>
+<EOF>
+    sudo yum -y update
+</EOF>
 
 📦 Step 2: Install the Extra Packages for Enterprise Linux (EPEL) Repository
 
