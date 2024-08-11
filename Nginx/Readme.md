@@ -4,14 +4,15 @@
 
 # 🎉 Welcome to DevOpsGuru
 
-📦 PROCESS TO INSTALL NGINX
+# 📦 PROCESS TO INSTALL NGINX
 
-## 📄 If you are Using Latest Version of RHEL Distribution of Linux, You Can follow below Steps.
+# 📄 If you are Using Latest Version of RHEL Distribution of Linux, You Can follow below Steps.
 
 # 🔄 Step 1: Update Your System
 
+<EOL>
 sudo yum -y update
-
+</EOL>
 📦 Step 2: Install the Extra Packages for Enterprise Linux (EPEL) Repository
 
 Nginx is not included in the standard CentOS repositories, so you need to install the EPEL repository. EPEL is a free resource that offers a wide range of open-source packages for installation using Yum.
